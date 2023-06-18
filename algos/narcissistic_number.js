@@ -16,14 +16,6 @@
 // only valid positive non-zero integers will be passed into the function. 
 
 function narcissistic(value) {
-  // Code me to return true or false
-  // Steps needed:
-  // - The length of the value is the exponent we need to use
-  // - Loop through each number in the value and figure out
-  // the new value using our exponent.
-  // - Store each new value into an array or something, or a variable
-  // - If the total number of our previous step is the same as our original value
-  //  return true, else, false.
   const power = value.toString().length;
   const stringed_val = value.toString();
   let narc_num = 0;
