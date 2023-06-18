@@ -13,7 +13,14 @@
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
 function order(words){
-  // ...
+  // Solution:
+  // - We know we numbers can be from 1-9. Create a legend obj.
+  // - If the length of the string is 0, return an empty string.
+  // - Split on the spaces to get array, and then loop through them.
+  // - If the element at that iteration includes 1-9, assign the element
+  // to its respected spot in the legend.
+  // - Create and return the string once the loop is done.
+  
 }
 
 // Sample Tests...
