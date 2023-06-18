@@ -13,15 +13,40 @@
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
 function order(words){
-  // Solution:
-  // - We know we numbers can be from 1-9. Create a legend obj.
-  // - If the length of the string is 0, return an empty string.
-  // - Split on the spaces to get array, and then loop through them.
-  // - If the element at that iteration includes 1-9, assign the element
-  // to its respected spot in the legend.
-  // - Create and return the string once the loop is done.
-  
+  const legend = {
+    '1': '',
+    '2': '',
+    '3': '',
+    '4': '',
+    '5': '',
+    '6': '',
+    '7': '',
+    '8': '',
+    '9': '',
+  };
+  let return_string = '';
+  // Handle empty string case.
+  if (words.length == 0) {
+    return '';
+  }
+  for (const word of words.split(' ')) {
+    for (const key in legend) {
+      if (word.includes(key)) {
+        legend[key] = word;
+      }
+    }
+  }
+  for (const key in legend) {
+    if (legend[key]) {
+      return_string += legend[key] + ' ';
+    }
+  }
+  return return_string.trimEnd();
 }
+
+console.log(order('is2 Thi1s T4est 3a'));
+console.log(order('4of Fo1r pe6ople g3ood th5e the2'));
+console.log(order(''));
 
 // Sample Tests...
 // const {assert} = require('chai');
