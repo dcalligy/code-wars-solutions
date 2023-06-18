@@ -16,11 +16,16 @@
 
 String.prototype.toJadenCase = function () {
   //...
-  // Solution...
-  // - Split on every word.
-  // - Loop through the array and toUpper the first char of each element in the array
-  // - Join each element of the array to get a string and return the value.
+  const words_arry = this.split(' ');
+  let return_sentence = '';
+  for (let i = 0; i < words_arry.length; i++) {
+    return_sentence += words_arry[i][0].toUpperCase() + words_arry[i].substring(1) + ' ';
+  }
+  return return_sentence.trimEnd();
 };
+
+let str = 'How can mirrors be real if our eyes aren\'t real'.toJadenCase();
+console.log(str);
 
 // For testing
 // const Test = require('@codewars/test-compat');
