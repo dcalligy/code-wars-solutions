@@ -13,6 +13,8 @@
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
 function order(words){
+  // NOTE: A second solution can be created using the split, sort and match methods.
+  // That solutions is probably more elegant that what we came up with lol.
   const legend = {
     '1': '',
     '2': '',
