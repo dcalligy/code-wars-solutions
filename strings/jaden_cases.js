@@ -13,9 +13,10 @@
 // Example:
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
-
 String.prototype.toJadenCase = function () {
-  //...
+  // NOTE: This solution can be more elegant by doing the split
+  // and substring magic all on one line, followed by joining the array to
+  // convert our original value back into a string.
   const words_arry = this.split(' ');
   let return_sentence = '';
   for (let i = 0; i < words_arry.length; i++) {
