@@ -24,8 +24,17 @@ function narcissistic(value) {
   // - Store each new value into an array or something, or a variable
   // - If the total number of our previous step is the same as our original value
   //  return true, else, false.
+  const power = value.toString().length;
+  const stringed_val = value.toString();
+  let narc_num = 0;
+  for (let i = 0; i < stringed_val.length; i++) {
+    narc_num += Math.pow(parseInt(stringed_val[i]), power);
+  }
+  return narc_num == value ? true : false;
 }
 
+console.log(narcissistic(153));
+console.log(narcissistic(1652));
 
 /* For testing
 const { assert } = require("chai")
