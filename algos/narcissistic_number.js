@@ -22,7 +22,7 @@ function narcissistic(value) {
   for (let i = 0; i < stringed_val.length; i++) {
     narc_num += Math.pow(parseInt(stringed_val[i]), power);
   }
-  return narc_num == value ? true : false;
+  return narc_num === value;
 }
 
 console.log(narcissistic(153));
