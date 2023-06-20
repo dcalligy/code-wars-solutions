@@ -14,4 +14,8 @@
 // 1, 5, 3 --> 5 (1 + 4)
 const sequenceSum = (begin, end, step) => {
   // May the Force be with you
+  let count = 0;
+  for (let i = begin; i <= end; i += step) {
+    count += i;
+  }
 };
