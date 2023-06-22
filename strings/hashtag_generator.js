@@ -13,4 +13,10 @@
 // "    Hello     World   "                  =>  "#HelloWorld"
 // ""                                        =>  false
 function generateHashtag (str) {
+  // Solution:
+  // - Trim any whitespace from the front/end of the string.
+  // - Split on the remaining spaces to get an array of words.
+  // - Capitalize the first letter of each word.  (might need to loop through the array before this step)
+  // - Do some join magic to convert our array into a string.
+  // - Check the len of the string and return from the function accordingly.
 }
