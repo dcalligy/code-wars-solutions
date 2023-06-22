@@ -15,7 +15,16 @@
 const sequenceSum = (begin, end, step) => {
   // May the Force be with you
   let count = 0;
+  if (begin > end) {
+    return 0;
+  }
   for (let i = begin; i <= end; i += step) {
     count += i;
   }
+  return count;
 };
+
+console.log(sequenceSum(2, 2, 2));
+console.log(sequenceSum(2, 4, 6));
+console.log(sequenceSum(1, 5, 1));
+console.log(sequenceSum(1, 5, 3));
