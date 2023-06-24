@@ -31,7 +31,7 @@ function generateHashtag (str) {
   }
   if (hash_tag == '#') {
     return false;
-  } if (hash_tag.length > 140) {
+  } else if (hash_tag.length > 140) {
     return false;
   }
   return hash_tag;
