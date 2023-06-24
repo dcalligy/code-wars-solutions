@@ -13,24 +13,31 @@
 // "    Hello     World   "                  =>  "#HelloWorld"
 // ""                                        =>  false
 function generateHashtag (str) {
-  // Solution:
-  // - Trim any whitespace from the front/end of the string.
-  // - Split on the remaining spaces to get an array of words.
-  // - Capitalize the first letter of each word.  (might need to loop through the array before this step)
-  // - Do some join magic to convert our array into a string.
-  // - Check the len of the string and return from the function accordingly.
   if (str.length == 0) {
-    return 0;
+    return false;
   }
-  const words_arry = str.trim().split(' ');
+  const arry = [];
   let hash_tag = '#';
-  for (const word of words_arry) {
-    console.log('word[0]: ', word[0]);
-    hash_tag += word[0].toUpperCase() + word.substr(1, (word.length - 1));
+  str.trim().split(' ').forEach((w) => {
+    if (w) {
+      arry.push(w);
+    }
+  });
+  for (const a of arry) {
+    if (a.length > 140) {
+      return false;
+    }
+    hash_tag += a[0].toUpperCase() + a.substr(1, (a.length - 1));
   }
-  console.log('hash_tag: ', hash_tag);
+  if (hash_tag == '#') {
+    return false;
+  } if (hash_tag.length > 140) {
+    return false;
+  }
+  return hash_tag;
 }
 
 console.log(generateHashtag(' Hello there thanks for trying my Kata'));
 console.log(generateHashtag('    Hello     World   '));
+console.log(generateHashtag('Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Cat'));
 console.log('');
