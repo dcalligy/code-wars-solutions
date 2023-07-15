@@ -9,10 +9,9 @@
 
 const findUniq = (arr) => {
   const obj = {};
-  const start = 1;
   for (const element of arr) {
     if (!(element in obj)) {
-      obj[element] = start;
+      obj[element] = 1;
     } else {
       obj[element]++;
     }
@@ -41,8 +40,8 @@ const findUniq2 = (arr) => {
 };
 
 
-// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
-// console.log(findUniq([ 0, 0, 0.55, 0, 0 ]));
+console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+console.log(findUniq([ 0, 0, 0.55, 0, 0 ]));
 
 console.log(findUniq2([ 1, 1, 1, 2, 1, 1 ]));
 console.log(findUniq2([ 0, 0, 0.55, 0, 0 ]));
