@@ -24,5 +24,25 @@ const findUniq = (arr) => {
   }
 };
 
-console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
-console.log(findUniq([ 0, 0, 0.55, 0, 0 ]));
+const findUniq2 = (arr) => {
+  const map = new Map();
+  for (const element of arr) {
+    if (!map.has(element)) {
+      map.set(element, 1);
+    } else {
+      map.set(element, map.get(element) + 1);
+    }
+  }
+  for (const [key, value] of map) {
+    if (value === 1) {
+      return parseFloat(key);
+    }
+  }
+};
+
+
+// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+// console.log(findUniq([ 0, 0, 0.55, 0, 0 ]));
+
+console.log(findUniq2([ 1, 1, 1, 2, 1, 1 ]));
+console.log(findUniq2([ 0, 0, 0.55, 0, 0 ]));
