@@ -24,9 +24,6 @@ function generateHashtag (str) {
     }
   });
   for (const a of arry) {
-    if (a.length > 140) {
-      return false;
-    }
     hash_tag += a[0].toUpperCase() + a.substr(1, (a.length - 1));
   }
   if (hash_tag == '#') {
