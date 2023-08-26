@@ -5,6 +5,10 @@
 // 14: -14
 // -34: 34
 
+// I am adding this comment because after submitting my solution it has been
+// brought to my attention that you can also do the following solutions.
+// return -n --> a one liner
+// return n -(n * 2) --> (n - n * 2) = n * (1 - 2) = -n
 function opposite(number) {
   if (number == 0) {
     return 0;
