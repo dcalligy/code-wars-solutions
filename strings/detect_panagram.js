@@ -26,5 +26,27 @@ function isPangram(string){
   return is_pangram;
 }
 
-const val = isPangram('The quick brown fox jumps over the lazy dog.');
+// This is an attempt for a second solution but there are a few things we need to keep track of
+// - We shouldn't care about whitespace.
+// - We should not care about punctuation.
+// We will come back to this later.
+function isPangram2(string) {
+  const alphabet = [
+      'a', 'b', 'c', 'd', 'e', 'f', 'g',
+      'h', 'i', 'j', 'k', 'l', 'm', 'n',
+      'o', 'p', 'q', 'r', 's', 't', 'u',
+      'v', 'w', 'x', 'y', 'z'
+  ];
+  const lowercase = string.toLowerCase().replace('.', '');
+  let is_pangram = true;
+  for (let i = 0; i < lowercase.length; i++) {
+    if (!alphabet.includes(lowercase[i])) {
+      is_pangram = false;
+      break;
+    }
+  }
+  return is_pangram;
+}
+
+const val = isPangram2('The quick brown fox jumps over the lazy dog.');
 console.log(val);
