@@ -14,7 +14,7 @@ function countPositivesSumNegatives(input) {
     // do nothing
   } else {
     for (const ele of input) {
-      if (ele >0) {
+      if (ele > 0) {
       positive++;
       } else {
       negative += ele;
