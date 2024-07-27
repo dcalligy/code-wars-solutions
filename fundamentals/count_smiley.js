@@ -14,7 +14,7 @@
 
 // Brute force always wins... Come back and do this with a regex.
 function countSmileys(arr) {
-  const valid_smileys = [":)",";)",":D",";D",":-D",":~D",":-)",":~)",";~D",";~)",";-D",";-)"]
+  const valid_smileys = [":)",";)",":D",";D",":-D",":~D",":-)",":~)",";~D",";~)",";-D",";-)"];
   let count = 0;
   if (arr.length == 0) {
     return count;
