@@ -12,15 +12,10 @@
 // Valid smiley faces examples: :) :D ;-D :~)
 // Invalid smiley faces: ;( :> :} :]
 
-// Brute force always wins... Come back and do this with a regex.
 function countSmileys(arr) {
-  const valid_smileys = [":)",";)",":D",";D",":-D",":~D",":-)",":~)",";~D",";~)",";-D",";-)"];
   let count = 0;
-  if (arr.length == 0) {
-    return count;
-  }
   for (const a of arr) {
-    if (valid_smileys.includes(a)) {
+    if (/^[:;][-~]?[)D]$/.test(a)) {
       count++;
     }
   }
